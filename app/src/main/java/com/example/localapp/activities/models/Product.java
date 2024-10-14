@@ -1,6 +1,7 @@
-package model;
+package com.example.localapp.activities.models;
 
 public class Product {
+
     private String name, image, status;
     private double price, discount;
     private int stock, id;

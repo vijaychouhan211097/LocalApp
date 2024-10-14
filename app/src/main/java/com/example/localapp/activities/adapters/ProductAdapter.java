@@ -1,4 +1,4 @@
-package adapters;
+package com.example.localapp.activities.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,19 +10,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.localapp.R;
+import com.example.localapp.activities.models.Product;
 import com.example.localapp.databinding.ItemProductBinding;
 
 import java.util.ArrayList;
-
-import model.Product;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
 
     Context context;
     ArrayList<Product> products;
-
-    public ProductAdapter(Context context, ArrayList<Product> products) {
-        this.context = context;
+    public ProductAdapter(Context context, ArrayList<Product> products){
+        this.context =context;
         this.products = products;
     }
     @NonNull
@@ -38,18 +36,17 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
                 .load(product.getImage())
                 .into(holder.binding.image);
         holder.binding.label.setText(product.getName());
-        holder.binding.price.setText("PKR" + product.getPrice());
+        holder.binding.price.setText("PKR " + product.getPrice());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return products.size();
     }
 
     public class ProductViewHolder extends RecyclerView.ViewHolder {
 
         ItemProductBinding binding;
-
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
             binding = ItemProductBinding.bind(itemView);

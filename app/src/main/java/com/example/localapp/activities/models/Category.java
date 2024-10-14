@@ -1,4 +1,4 @@
-package model;
+package com.example.localapp.activities.models;
 
 public class Category {
     private String name, icon, color, brief;
