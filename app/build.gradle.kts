@@ -62,5 +62,7 @@ dependencies {
     implementation ("me.relex:circleindicator:2.1.6")
     implementation ("org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0")
     /* For Slider - end */
+    //volley - api caller
+    implementation("com.android.volley:volley:1.2.1")
 
 }
